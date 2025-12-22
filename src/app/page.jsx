@@ -1,7 +1,10 @@
+import ShortNav from "@/components/ShortNav";
 import React from "react";
 
 const Home = () => {
-  return <div>Hello World</div>;
+  return <>
+  <ShortNav></ShortNav>
+  </>;
 };
 
 export default Home;
