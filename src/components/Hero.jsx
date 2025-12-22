@@ -15,7 +15,7 @@ const slides = [
 
 const Hero = () => {
   return (
-    <div className="relative w-full h-full lg:h-[calc(100vh-109px)]">
+    <div className="relative w-full h-[calc(65vh-109px)]">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={0}
@@ -28,7 +28,7 @@ const Hero = () => {
         }}
         navigation
         pagination={{ clickable: true }}
-        className="w-full h-[60%]"
+        className="w-full h-full"
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
