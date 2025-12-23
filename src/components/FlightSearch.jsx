@@ -1,5 +1,5 @@
 "use client";
-
+import { toast } from "react-toastify";
 import { useState } from "react";
 import {
   ArrowLeftRight,
@@ -13,6 +13,9 @@ import {
 import AirportInput from "./AirportInput";
 
 export default function FlightSearch() {
+  const handleSearch = () => {
+    toast.info("Searching..... ✈️");
+  };
   const [departureDate, setDepartureDate] = useState("");
 
   const today = new Date().toISOString().split("T")[0];
@@ -86,7 +89,10 @@ export default function FlightSearch() {
 
         {/* Search Button */}
         <div className="mt-6 flex justify-center">
-          <button className="flex items-center gap-2 rounded-lg bg-blue-700 px-12 py-3 text-white font-semibold hover:bg-blue-800 transition">
+          <button
+            onClick={handleSearch}
+            className="flex items-center gap-2 rounded-lg bg-blue-700 px-12 py-3 text-white font-semibold hover:bg-blue-800 transition"
+          >
             <Search size={18} />
             Search
           </button>
