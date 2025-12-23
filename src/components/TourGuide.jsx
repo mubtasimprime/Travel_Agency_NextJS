@@ -64,7 +64,7 @@ const TourGuide = () => {
           <p className="text-gray-700">
             Need to Help? Don’t Hesitate Friendly Collaborate with Expertise
           </p>
-          <button className="flex items-center gap-2 rounded-full border border-gray-300 px-6 py-3 text-sm hover:bg-blue-600 hover:text-white transition duration-300 font-medium cursor-pointer">
+          <button className="flex items-center gap-2 rounded-full bg-blue-600 text-white border border-gray-300 px-6 py-3 text-sm hover:bg-white hover:text-blue-600 transition duration-300 font-medium cursor-pointer">
             Meet Our Team →
           </button>
         </div>
