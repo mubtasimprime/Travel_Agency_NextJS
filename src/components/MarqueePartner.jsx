@@ -16,7 +16,7 @@ const partners = [
 const MarqueePartner = () => {
   return (
     <Container>
-      <h1 className="text-2xl font-bold text-center mt-12 text-gray-700">Those Company You Can <span className="text-blue-600">Easily</span> Trust !</h1>
+      <h1 className="text-2xl font-bold text-center mt-12 text-gray-700 px-4 lg:px-0">Those Company You Can <span className="text-blue-600">Easily</span> Trust !</h1>
       {" "}
       <div className="bg-white py-10">
         <Marquee speed={80} pauseOnHover gradient={false}>

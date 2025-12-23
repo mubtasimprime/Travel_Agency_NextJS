@@ -4,7 +4,7 @@ import Container from "./Container";
 const ShortFooter = () => {
   return (
     <>
-      <div className="bg-[#0F172A] pt-4 pb-16 md:pb-18 lg:pb-4">
+      <div className="bg-[#0F172A] pt-4 pb-4">
         <Container>
           {" "}
           <div className="flex flex-col md:flex-row justify-between items-center gap-1 md:gap-4 text-sm text-white">

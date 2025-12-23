@@ -11,7 +11,7 @@ const Navbar = () => {
   const [currency, setCurrency] = useState("BDT");
 
   return (
-    <nav className="bg-white shadow-md sticky top-0 z-90">
+    <nav className="bg-white shadow-md sticky top-0 z-90 px-4 lg:px-0">
       <Container>
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
@@ -75,7 +75,7 @@ const Navbar = () => {
               href="/contact"
               className="text-gray-700 hover:text-blue-600 font-semibold hover:scale-105 transition duration-300"
             >
-              Contact Test
+              Contact Us
             </Link>
           </div>
 

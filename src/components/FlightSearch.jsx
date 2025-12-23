@@ -18,21 +18,21 @@ export default function FlightSearch() {
   const today = new Date().toISOString().split("T")[0];
 
   return (
-    <div className="relative -mt-24 z-30">
+    <div className="relative -mt-24 z-30 px-4">
       <div className="mx-auto max-w-6xl rounded-2xl bg-blue-50 shadow-xl p-6">
         {/* Trip Type */}
         <div className="mb-6 flex items-center gap-3">
-          <span className="flex items-center gap-2 rounded-full border border-blue-600 bg-white px-4 py-1 text-sm font-medium text-blue-700 hover:bg-blue-600 hover:text-white cursor-pointer transition duration-300">
+          <span className="items-center gap-2 rounded-full border border-blue-600 bg-white px-4 py-1 text-sm font-medium text-blue-700 hover:bg-blue-600 hover:text-white cursor-pointer transition duration-300 hidden md:flex">
             <ArrowRight size={14} />
             One Way
           </span>
 
-          <span className="flex items-center gap-2 rounded-full border border-blue-600 bg-white px-4 py-1 text-sm font-medium text-blue-700 hover:bg-blue-600 hover:text-white cursor-pointer transition duration-300">
+          <span className="items-center gap-2 rounded-full border border-blue-600 bg-white px-4 py-1 text-sm font-medium text-blue-700 hover:bg-blue-600 hover:text-white cursor-pointer transition duration-300 hidden md:flex">
             <ArrowLeftRight size={14} />
             Round Trip
           </span>
 
-          <span className="flex items-center gap-2 rounded-full border border-blue-600 bg-white px-4 py-1 text-sm font-medium text-blue-700 hover:bg-blue-600 hover:text-white cursor-pointer transition duration-300">
+          <span className="items-center gap-2 rounded-full border border-blue-600 bg-white px-4 py-1 text-sm font-medium text-blue-700 hover:bg-blue-600 hover:text-white cursor-pointer transition duration-300 hidden md:flex">
             <MapPin size={14} />
             Multi City
           </span>

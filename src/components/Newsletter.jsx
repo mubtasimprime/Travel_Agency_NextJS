@@ -4,7 +4,7 @@ import Container from "./Container";
 
 const Newsletter = () => {
   return (
-    <Container className="py-15">
+    <Container className="py-15 px-4 lg:px-0">
       <section className="relative rounded-3xl bg-blue-100 px-6 py-16 text-center">
 
         {/* Content */}

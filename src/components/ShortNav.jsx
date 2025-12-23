@@ -10,7 +10,7 @@ import Container from "./Container";
 
 const ShortNav = () => {
   return (
-    <section className="bg-blue-700 text-white py-2">
+    <section className="bg-blue-700 text-white py-2 px-4 lg:px-0">
       <Container>
         <div className="flex justify-between">
           {/* Left Side */}

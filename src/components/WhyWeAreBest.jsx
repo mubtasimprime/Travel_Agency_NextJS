@@ -38,16 +38,16 @@ const WhyWeAreBestAgency = () => {
                 Trusted Travel Partner
               </div>
 
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight text-center lg:text-left">
                 Why We&apos;re The Best Travel Agency
               </h1>
 
               <div className="space-y-4">
-                <p className="text-xl text-blue-600 font-semibold">
+                <p className="text-xl text-blue-600 font-semibold text-center lg:text-left">
                   Welcome to Prime Travel Agency – Your Gateway to Unforgettable
                   Journeys!
                 </p>
-                <p className="text-lg text-gray-600 leading-relaxed">
+                <p className="text-lg text-gray-600 leading-relaxed text-center lg:text-left">
                   At Prime Travel Agency, we are passionate about creating
                   exceptional travel experiences. Whether you&apos;re looking
                   for a relaxing beach vacation, an adventurous trek, a
