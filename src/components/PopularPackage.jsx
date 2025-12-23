@@ -69,7 +69,7 @@ const PopularPackage = () => {
   return (
     <main className="bg-gray-50 px-4 py-12">
       <div className="text-center">
-        <h1 className="font-bold text-4xl">Popular Travel Packages</h1>
+        <h1 className="font-bold text-4xl">Popular <span className="text-blue-700">Travel Packages</span></h1>
         <p className="text-gray-600 mt-4 text-xl max-w-lg mx-auto">
           A curated list of the most popular travel packages based on different
           destinations.

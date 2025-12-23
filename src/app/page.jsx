@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import PopularPackage from "@/components/PopularPackage";
 import ShortFooter from "@/components/ShortFooter";
 import ShortNav from "@/components/ShortNav";
+import TourGuide from "@/components/TourGuide";
 import TrustPartner from "@/components/TrustPartner";
 import React from "react";
 
@@ -19,6 +20,7 @@ const Home = () => {
       <TrustPartner></TrustPartner>
       <PopularPackage></PopularPackage>
       <MarqueePartner></MarqueePartner>
+      <TourGuide></TourGuide>
       <Footer></Footer>
       <ShortFooter></ShortFooter>
     </>
