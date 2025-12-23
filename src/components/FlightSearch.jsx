@@ -1,80 +1,70 @@
 "use client";
-import { AirportStore, loadAirports } from "@/store/AirportStore";
-import { useEffect, useState } from "react";
 
-export default function FlightSearch({ label }) {
-  const [input, setInput] = useState("");
+import { useState } from "react";
+import { ArrowLeftRight, Calendar, Search } from "lucide-react";
+import AirportInput from "./AirportInput";
 
-  const allAirports = AirportStore.useState((s) => s.airports);
-  const filteredAirports = AirportStore.useState((s) => s.filteredAirports);
+export default function FlightSearch() {
+  const [departureDate, setDepartureDate] = useState("");
 
-  useEffect(() => {
-    if (AirportStore.getRawState().airports.length === 0) {
-      loadAirports();
-    }
-  }, []);
-
-  const handleChange = (e) => {
-    const value = e.target.value;
-    setInput(value);
-
-    if (value.length < 2) {
-      AirportStore.update((s) => {
-        s.filteredAirports = [];
-      });
-      return;
-    }
-
-    const results = allAirports.filter((a) =>
-      a.search_contents.toLowerCase().includes(value.toLowerCase())
-    );
-
-    AirportStore.update((s) => {
-      s.filteredAirports = results.slice(0, 10);
-    });
-  };
-
-  const selectAirport = (airport) => {
-    setInput(airport.search_contents);
-
-    AirportStore.update((s) => {
-      s.selectedAirport = airport;
-      s.filteredAirports = [];
-    });
-  };
+  const today = new Date().toISOString().split("T")[0];
 
   return (
-    <div className="relative w-full max-w-md mx-auto mb-6 -mt-8 z-90 bg-white rounded-md">
-      <label className="block text-sm font-medium text-gray-700 mb-1">
-        {label}
-      </label>
+    <div className="relative -mt-24 z-30">
+      <div className="mx-auto max-w-6xl rounded-2xl bg-white shadow-xl p-6">
 
-      <input
-        type="text"
-        value={input}
-        onChange={handleChange}
-        placeholder="City or Airport"
-        className="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-blue-500 outline-none"
-      />
+        {/* Trip Type */}
+        <div className="mb-6 flex items-center gap-3">
+          <span className="rounded-full border border-blue-600 bg-blue-50 px-4 py-1 text-sm font-medium text-blue-700">
+            One Way
+          </span>
+        </div>
 
-      {filteredAirports.length > 0 && (
-        <ul className="absolute z-20 bg-white border border-gray-300 w-full mt-1 rounded-md shadow-lg max-h-64 overflow-y-auto">
-          {filteredAirports.map((airport) => (
-            <li
-              key={airport.code}
-              onClick={() => selectAirport(airport)}
-              className="px-4 py-3 hover:bg-blue-50 cursor-pointer"
-            >
-              <div className="font-medium">
-                {airport.code} – {airport.airport_name}
-              </div>
-              <div className="text-sm text-gray-500">
-                {airport.city_name}, {airport.country_name}
-              </div>
-            </li>
-          ))}
-        </ul>
-      )}
+        {/* Inputs */}
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_48px_1fr_1fr] gap-4 items-end">
+
+          {/* Leaving From */}
+          <AirportInput label="Leaving From" type="from" />
+
+          {/* Swap Arrow */}
+          <div className="hidden md:flex justify-center items-center">
+            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-blue-600 text-white">
+              <ArrowLeftRight size={16} />
+            </div>
+          </div>
+
+          {/* Going To */}
+          <AirportInput label="Going To" type="to" />
+
+          {/* Departure Date */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Departure Date
+            </label>
+            <div className="relative">
+              <Calendar
+                size={18}
+                className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+              />
+              <input
+                type="date"
+                min={today}
+                value={departureDate}
+                onChange={(e) => setDepartureDate(e.target.value)}
+                className="w-full rounded-lg border border-gray-300 pl-10 pr-3 py-3 focus:ring-2 focus:ring-blue-500 outline-none"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Search Button */}
+        <div className="mt-6 flex justify-center">
+          <button className="flex items-center gap-2 rounded-lg bg-blue-700 px-12 py-3 text-white font-semibold hover:bg-blue-800 transition">
+            <Search size={18} />
+            Search
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

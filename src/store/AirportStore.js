@@ -1,11 +1,10 @@
-// store/AirportStore.js
 import { fetchAirports } from "@/api/airportApi";
 import { Store } from "pullstate";
 
 export const AirportStore = new Store({
   airports: [],
-  filteredAirports: [],
-  selectedAirport: null,
+  fromAirport: null,
+  toAirport: null,
   loading: false,
 });
 
