@@ -40,7 +40,7 @@ export default function TrustPartner() {
             <div className="md:col-span-2">
               <h2 className="text-3xl font-bold text-black leading-snug">
                 To Go Your Desire Place <br />
-                Through <span className="text-blue-700">GoFly</span>
+                Through <span className="text-blue-700">Prime Flight Agency</span>
               </h2>
             </div>
 

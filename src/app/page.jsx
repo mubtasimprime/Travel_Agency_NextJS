@@ -9,6 +9,7 @@ import ShortFooter from "@/components/ShortFooter";
 import ShortNav from "@/components/ShortNav";
 import TourGuide from "@/components/TourGuide";
 import TrustPartner from "@/components/TrustPartner";
+import WhyWeAreBestAgency from "@/components/WhyWeAreBest";
 import React from "react";
 
 const Home = () => {
@@ -20,6 +21,7 @@ const Home = () => {
       <FlightSearch></FlightSearch>
       <TrustPartner></TrustPartner>
       <PopularPackage></PopularPackage>
+      <WhyWeAreBestAgency></WhyWeAreBestAgency>
       <MarqueePartner></MarqueePartner>
       <TourGuide></TourGuide>
       <Newsletter></Newsletter>

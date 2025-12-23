@@ -44,7 +44,7 @@ export default function AirportInput({ label, type }) {
 
   return (
     <div className="relative">
-      <label className="block text-sm font-medium text-gray-700 mb-1">
+      <label className="block text-sm font-semibold text-gray-700 mb-1">
         {label}
       </label>
 
@@ -58,7 +58,7 @@ export default function AirportInput({ label, type }) {
           value={input}
           onChange={handleChange}
           placeholder="City or Airport"
-          className="w-full rounded-lg border border-gray-300 pl-10 pr-3 py-3 focus:ring-2 focus:ring-blue-500 outline-none"
+          className="w-full rounded-lg border border-gray-300 pl-10 pr-3 py-3 focus:ring-2 focus:ring-blue-500 outline-none bg-white"
         />
       </div>
 
