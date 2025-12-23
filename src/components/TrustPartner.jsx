@@ -31,8 +31,6 @@ export default function TrustPartner() {
           fill
           className="object-cover bg-blue-600"
         />
-
-        {/* DARK OVERLAY (optional but recommended) */}
         <div className="absolute inset-0 bg-white/80"></div>
 
         {/* CONTENT */}

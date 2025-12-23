@@ -29,7 +29,7 @@ const TourGuide = () => {
       <div className="container mx-auto px-4 text-center">
         {/* Heading */}
         <h2 className="text-4xl font-bold text-gray-900">Tour <span className="text-blue-700">Guided</span></h2>
-        <p className="mt-4 max-w-md mx-auto text-gray-600 text-xl">
+        <p className="mt-4 max-w-xl mx-auto text-gray-600 text-xl">
           A curated list of the most popular travel packages based on different
           destinations.
         </p>
