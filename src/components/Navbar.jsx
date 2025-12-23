@@ -11,7 +11,7 @@ const Navbar = () => {
   const [currency, setCurrency] = useState("BDT");
 
   return (
-    <nav className="bg-white shadow-md">
+    <nav className="bg-white shadow-md sticky top-0 z-90">
       <Container>
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
