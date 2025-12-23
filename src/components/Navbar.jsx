@@ -75,7 +75,7 @@ const Navbar = () => {
               href="/contact"
               className="text-gray-700 hover:text-blue-600 font-semibold hover:scale-105 transition duration-300"
             >
-              Contact Us
+              Contact Test
             </Link>
           </div>
 
